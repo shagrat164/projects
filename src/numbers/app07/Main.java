@@ -34,6 +34,11 @@ public class Main {
         System.out.print("Процентная ставка: ");
         percent = Double.parseDouble(reader.readLine());
 
-        
+        System.out.println("----------------");
+
+        double i = percent / 100 / 12;
+        double platezh = (summ - vznos) * ((i * Math.pow(1+i, mount))/(Math.pow(1+i, mount)-1));
+
+        System.out.printf("Ежемесячный платёж: %.2f", platezh);
     }
 }
